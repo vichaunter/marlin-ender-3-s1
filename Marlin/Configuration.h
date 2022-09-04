@@ -60,7 +60,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(tiagofreire-pt, Ender 3 S1 F4)" // Who made the changes.
+//#define STRING_CONFIG_H_AUTHOR "(tiagofreire-pt, Ender 3 S1 F4)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -627,14 +627,14 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
-#define HEATER_1_MAXTEMP 275
-#define HEATER_2_MAXTEMP 275
-#define HEATER_3_MAXTEMP 275
-#define HEATER_4_MAXTEMP 275
-#define HEATER_5_MAXTEMP 275
-#define HEATER_6_MAXTEMP 275
-#define HEATER_7_MAXTEMP 275
+#define HEATER_0_MAXTEMP 265
+#define HEATER_1_MAXTEMP 265
+#define HEATER_2_MAXTEMP 265
+#define HEATER_3_MAXTEMP 265
+#define HEATER_4_MAXTEMP 265
+#define HEATER_5_MAXTEMP 265
+#define HEATER_6_MAXTEMP 265
+#define HEATER_7_MAXTEMP 265
 #define BED_MAXTEMP 120
 #define CHAMBER_MAXTEMP 60
 
@@ -861,7 +861,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 160
+#define EXTRUDE_MINTEMP 170
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -2098,8 +2098,8 @@
 
 //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-#define MESH_INSET 1         // Set Mesh bounds as an inset region of the bed
-#define GRID_MAX_POINTS_X 10 // Don't use more than 15 points per axis, implementation limited.
+#define MESH_INSET 10       // Set Mesh bounds as an inset region of the bed
+#define GRID_MAX_POINTS_X 3 // Don't use more than 15 points per axis, implementation limited.
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
@@ -2298,8 +2298,8 @@
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
 #define EEPROM_SETTINGS // Persistent storage with M500 and M501
-//#define DISABLE_M503        // Saves ~2700 bytes of flash. Disable for release!
-#define EEPROM_CHITCHAT    // Give feedback on EEPROM commands. Disable to save PROGMEM.
+//#define DISABLE_M503    // Saves ~2700 bytes of flash. Disable for release!
+//#define EEPROM_CHITCHAT    // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
 #define EEPROM_AUTO_INIT // Init EEPROM automatically on any errors.
@@ -2343,13 +2343,13 @@
 #define PREHEAT_1_FAN_SPEED 0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL "PLA"
-#define PREHEAT_2_TEMP_HOTEND 200
-#define PREHEAT_2_TEMP_BED 45
+#define PREHEAT_2_TEMP_HOTEND 210
+#define PREHEAT_2_TEMP_BED 60
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED 0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL "PETG"
-#define PREHEAT_3_TEMP_HOTEND 225
+#define PREHEAT_3_TEMP_HOTEND 240
 #define PREHEAT_3_TEMP_BED 70
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED 0 // Value from 0 to 255
@@ -2624,7 +2624,7 @@
  * just remove some extraneous menu items to recover space.
  */
 //#define NO_LCD_MENUS
-//#define SLIM_LCD_MENUS
+#define SLIM_LCD_MENUS
 
 //
 // ENCODER SETTINGS
